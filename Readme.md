@@ -26,6 +26,18 @@
 
 ## 刷新/重建当前项目
 
+只需要 `.vimrc` 中添加一个映射：
+
+```
+nmap <leader>r <Plug>WxappReload
+```
+
+就可以使用快捷键就行刷新开发者工具的操作了，函数内部做了判定，如果当前文件类型为 `wxml` 或 `wxss` 时执行刷新操作，否则执行 `项目重建操作`。
+
+因为实现用到了 MacOS 独有的 `osascript`，所以只能在 Mac 系统商正常使用。
+
+如果需要自动刷新可以使用 autocmd 配合函数 `wxapp#reload()` 和 `wxapp#rebuild()` 来完成，但是现在开发者工具没有提供全局的快捷键映射导致刷新前必须激活开发者工具的窗口，所以自动刷新体验并不理想。
+
 ## xml 编辑推荐插件：
 
 * [xml.vim](http://www.vim.org/scripts/script.php?script_id=1397) 用于辅助编辑 xml 文件, 包含自动添加匹配标签、快速修改/删除标签等功能。
