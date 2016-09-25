@@ -4,15 +4,15 @@
 
 提供包含文件检测、语法高亮、缩进、代码段、单词列表、语法检查等功能支持。
 
-![](http://7xrrpg.com1.z0.glb.clouddn.com/one.gif)
+![one](https://cloud.githubusercontent.com/assets/251450/18817567/1bf3c1a0-8396-11e6-81b0-46de8b86acca.gif)
 
 文件生成
 
-![](http://7xrrpg.com1.z0.glb.clouddn.com/two.gif)
+![two](https://cloud.githubusercontent.com/assets/251450/18817568/222c1180-8396-11e6-9bed-a175d81f201f.gif)
 
 插入代码块
 
-![](http://7xrrpg.com1.z0.glb.clouddn.com/three.gif)
+![three](https://cloud.githubusercontent.com/assets/251450/18817569/27e7db54-8396-11e6-85e2-3f82fc07365e.gif)
 
 使用 [unite](https://github.com/Shougo/unite.vim) 查找并插入代码
 
