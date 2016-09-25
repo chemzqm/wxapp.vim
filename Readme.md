@@ -4,6 +4,18 @@
 
 提供包含文件检测、语法高亮、缩进、代码段、单词列表、语法检查等功能支持。
 
+![](http://7xrrpg.com1.z0.glb.clouddn.com/one.gif)
+
+文件生成
+
+![](http://7xrrpg.com1.z0.glb.clouddn.com/two.gif)
+
+插入代码块
+
+![](http://7xrrpg.com1.z0.glb.clouddn.com/three.gif)
+
+使用 [unite](https://github.com/Shougo/unite.vim) 查找并插入代码
+
 ## 功能列表
 
 * 页面目录生成的命令

@@ -1,4 +1,4 @@
-command! -nargs=+ -complete=dir Wxgen :<C-U>call s:generate(<f-args>)
+command! -nargs=+ -complete=dir Wxgen call s:generate(<f-args>)
 
 nnoremap <silent> <plug>WxappReload :<C-u>call <SID>reload()<cr>
 
