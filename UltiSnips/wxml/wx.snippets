@@ -1,0 +1,69 @@
+snippet view "view" b
+<view class="section">
+</view>
+endsnippet
+
+snippet scroll "vertical scroll view" b
+<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+</scroll-view>
+endsnippet
+
+snippet hscroll "horizon hscroll" b
+<scroll-view scroll-x="true">
+</scroll-view>
+endsnippet
+
+snippet swiper "swiper view" b
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+endsnippet
+
+snippet block "block" b
+<block wx:for="{{${1:list}}}">
+  <view data-id="{{item.id}}">
+  </view>
+</block>
+endsnippet
+
+snippet icon "icon" b
+<icon type="${1:success}" size="${2:23}"/>
+endsnippet
+
+snippet text "text" b
+<text>{{text}}</text>
+endsnippet
+
+snippet progress "progress" b
+<progress percent="20" show-info active stroke-width="12" color="pink"/>
+endsnippet
+
+snippet button "button" b
+<button type="default" size="${1:default}" loading="${2:false}" plain="${3:false}"
+  disabled="${4:false}" bindtap="default" hover-class="other-button-hover">default</button>
+endsnippet
+
+snippet checkbox "checkbox group" b
+<checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{items}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</checkbox-group>
+endsnippet
+
+snippet form "form" b
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section section_gap">
+    <view class="section__title">checkbox</view>
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
+endsnippet
