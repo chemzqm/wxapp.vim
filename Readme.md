@@ -48,9 +48,7 @@ nmap <leader>r <Plug>WxappReload
 
 因为实现用到了 MacOS 独有的 `osascript`，所以只能在 Mac 系统上正常使用。
 
-如果需要自动刷新可以使用 autocmd 配合函数 `wxapp#reload()` 和 `wxapp#rebuild()` 来完成，但是现在开发者工具没有提供全局的快捷键映射导致刷新前必须激活开发者工具的窗口，所以自动刷新体验并不理想。
-
-可以通过修改开发者工具的源码方式来让其支持全局热键，从而免去切换程序的困扰，详情参考 https://chemzqm.me/vim-wxapp-reload
+如果需要保存时让开发者工具自动刷新，请参考：https://chemzqm.me/vim-wxapp-reload
 
 ## xml 编辑推荐插件：
 
@@ -120,6 +118,8 @@ nmap <leader>r <Plug>WxappReload
 
 * omnicomplete 支持
 * 文档跳转支持
+* 异步接收 console 消息
+* 编辑同步 AppData
 
 ## LICENSE
 Copyright 2016 chemzqm@gmail.com
