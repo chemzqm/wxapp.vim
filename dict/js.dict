@@ -146,3 +146,5 @@ url
 userInfo
 video
 width
+requestAnimationFrame
+canvasIdErrorCallback

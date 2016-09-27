@@ -96,6 +96,7 @@ nmap <leader>r <Plug>WxappReload
       \ },
       \}
     ```
+
 ## 语法检查相关
 
 * javascript 推荐使用 [eslint](http://eslint.org/), 然后在 `.eslintrc` 中加入
