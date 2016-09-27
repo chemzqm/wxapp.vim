@@ -21,6 +21,13 @@ function! wxapp#generate(folder, name) abort
   endif
 endfunction
 
+function! wxapp#start() abort
+  call s:osascript(
+    \'tell application "wechatwebdevtools"',
+    \  'activate',
+    \'end tell')
+endfunction
+
 function! wxapp#reload() abort
   return s:osascript(
     \ 'if application "wechatwebdevtools" is not running',
