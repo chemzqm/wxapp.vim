@@ -138,3 +138,9 @@ video
 view
 waiting
 warn
+wx:for-items
+wx:for-item
+item
+wx:if
+wx:elif
+wx:else

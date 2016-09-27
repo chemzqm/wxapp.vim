@@ -15,6 +15,7 @@ syn match XMLCData "<!\[CDATA\[\_.\{-}\]\]>" fold transparent extend
 syn match XMLCommentFold "<!--\_.\{-}-->" fold transparent extend
 
 setl foldtext=XMLFoldLabel()
+setl omnifunc=wxmlcomplete#Complete
 
 function! XMLFoldLabel()
   let getcontent = substitute(getline(v:foldstart), "^[[:space:]]*", "", 'g')
