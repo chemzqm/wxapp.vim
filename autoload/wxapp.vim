@@ -22,6 +22,7 @@ function! wxapp#generate(folder, name) abort
 endfunction
 
 function! wxapp#start() abort
+  if !has("mac") | return | endif
   call s:osascript(
     \'tell application "wechatwebdevtools"',
     \  'activate',
@@ -29,6 +30,7 @@ function! wxapp#start() abort
 endfunction
 
 function! wxapp#reload() abort
+  if !has("mac") | return | endif
   return s:osascript(
     \ 'if application "wechatwebdevtools" is not running',
     \   'error',
@@ -43,6 +45,7 @@ function! wxapp#reload() abort
 endfunction
 
 function! wxapp#rebuild() abort
+  if !has("mac") | return | endif
   return s:osascript(
     \ 'if application "wechatwebdevtools" is not running',
     \   'error',
