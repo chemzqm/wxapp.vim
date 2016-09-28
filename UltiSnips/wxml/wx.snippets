@@ -1,10 +1,19 @@
+snippet import "wxapp import" b
+<import src="${1:./header.wxml}" />
+endsnippet
+
+snippet template "wxapp template" b
+<template is="${1:name}" data="{{${2:...data}}}"/>
+endsnippet
+
 snippet view "view" b
-<view class="section">
+<view class="${1}">
+  ${2}
 </view>
 endsnippet
 
 snippet scroll "vertical scroll view" b
-<scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+<scroll-view bindscroll="${1:scroll}" scroll-top="{{${2:scrollTop}}}">
 </scroll-view>
 endsnippet
 
@@ -36,7 +45,7 @@ snippet icon "icon" b
 endsnippet
 
 snippet text "text" b
-<text>{{text}}</text>
+<text>{{${1:text}}}</text>
 endsnippet
 
 snippet progress "progress" b
@@ -44,8 +53,7 @@ snippet progress "progress" b
 endsnippet
 
 snippet button "button" b
-<button type="default" size="${1:default}" loading="${2:false}" plain="${3:false}"
-  disabled="${4:false}" bindtap="default" hover-class="other-button-hover">default</button>
+<button type="default" size="${1:default}">${2:text}</button>
 endsnippet
 
 snippet checkbox "checkbox group" b
