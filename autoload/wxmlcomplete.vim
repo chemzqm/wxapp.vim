@@ -1,5 +1,5 @@
 if !exists('*json_decode')
-  echohl Error | echon 'json_decode function not found' | echohl None
+  echohl Error | echon 'json_decode function not found, please upgrade your vim' | echohl None
   finish
 endif
 
