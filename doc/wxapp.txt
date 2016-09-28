@@ -9,7 +9,7 @@
 
 
 Author		: Qiming Zhao <chemzqm@gmail.com>
-Version		: 0.1.0
+Version		: 0.1.1
 Last Change	: Sep 27, 2016
 
 License : MIT license {{{
@@ -41,11 +41,12 @@ CONTENTS				*wxapp-contents*
 
 INTRODUCTION		|wxapp-introduction|
 INSTALLATION		|wxapp-installation|
-REQUIREMENT			|wxapp-requirement|
-RECOMMENDS			|wxapp-recommends|
-INTERFACE			|wxapp-interface|
+REQUIREMENT		|wxapp-requirement|
+COMPLETE		|wxapp-complete|
+RECOMMENDS		|wxapp-recommends|
+INTERFACE		|wxapp-interface|
   COMMANDS			|wxapp-commands|
-  MAPPING				|wxapp-mappings|
+  MAPPING			|wxapp-mappings|
   FUNCTIONS			|wxapp-functions|
 CHANGELOG		|wxapp-changelog|
 
@@ -60,6 +61,7 @@ Wxapp.vim 专为微信小程序开发的插件，它提供以下主要功能：
 3. 启动，刷新和重建项目的开发者工具快捷命令
 4. wxml 和 javscript 的 |Ultisnips| 插件 snippets
 5. wxml 和 wxss 的 |Neomake| 插件 maker 进行语法检测
+6. omnicomplete 智能补全支持
 
 自动刷新开发者工具需要让开发者工具保持后台运行，一个解决办法是修改开发者工具源
 码并添加全局快捷键，详细使用方式请参考 https://chemzqm.me/vim-wxapp-reload
@@ -88,6 +90,13 @@ https://github.com/neomake/neomake
 
 插件提供的刷新、重建微信web开发者工具使用 mac 独有的 applescript，在其它系统无
 法正常使用。
+
+==============================================================================
+COMPLETE				*wxapp-complete*
+
+针对 wxml 和  wxss 的智能补全会在 vim 启动后自动配置，无需其它操作，针对
+javscript 的智能补全需要将 `tern/wxapp.js` 文件引入 tern 所在目录的 `plugin`
+文件夹下，然后配置 `.tern-project` 文件启用。
 
 ==============================================================================
 RECOMMENDS				*wxapp-recommends*
@@ -185,14 +194,16 @@ wxapp#rebuild()				*wxapp#rebuild*
 
 wxapp#generate(folder, name)		*wxapp#generate*
 
-在 folder 下生成名称为 name 的 page 以及相关文件
-
+在 folder 下生成名称为 name 的 Page 目录以及相关文件
 
 ==============================================================================
 CHANGELOG				 *wxapp-changelog*
 
 0.1.0	Sep 27, 2016
 	- 添加文档
+
+0.1.1	Sep 28, 2016
+	- 添加 omnicomplete 支持
 
 ==============================================================================
 

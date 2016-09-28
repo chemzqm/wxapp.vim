@@ -2,6 +2,7 @@
   "common": ["id", "class", "style", "hidden", "data-", "bind", "catch"],
   "tags": {
     "view": [],
+    "block": ["wx:for", "wx:for", "wx:for-items", "wx:for-item", "wx:if", "wx:elif", "wx:else"],
     "scroll-view": ["scroll-x", "scroll-y", "upper-threshold", "lower-threshold", "scroll-top", "scroll-left", "scroll-into-view", "bindscrolltoupper", "bindscrolltolower", "bindscroll"],
     "swiper": ["indicator-dots", "autoplay", "current", "interval", "duration", "bindchange"],
     "swiper-item": [],

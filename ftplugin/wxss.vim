@@ -4,4 +4,6 @@ if exists("b:did_ftplugin")
 endif
 
 runtime! ftplugin/css.vim ftplugin/css_*.vim ftplugin/css/*.vim
+setl omnifunc=csscomplete#CompleteCSS
+
 unlet! b:did_ftplugin
