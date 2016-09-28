@@ -1,5 +1,5 @@
 {
-  "common": ["id", "class", "style", "hidden", "data-", "bind", "catch"],
+  "common": ["id", "class", "style", "hidden", "data-", "bindtap", "catchtap"],
   "tags": {
     "view": [],
     "import": ["src"],
@@ -15,7 +15,7 @@
     "checkbox-group": ["bindchange"],
     "checkbox": ["value", "disabled", "checked"],
     "form": ["report-submit", "bindsubmit", "bindreset"],
-    "input": ["value", "type", "password", "placeholder", "disabled", "maxlength", "auto-focus", "focus", "bindchange", "bindinput", "bindfocus", "bindblur"],
+    "input": ["value", "type", "password", "placeholder", "disabled", "maxlength", "auto-focus", "focus", "bindchange", "bindinput", "bindfocus", "bindblur", "bindkeydown", "bindkeyup"],
     "label": ["for"],
     "picker": ["mode", "range", "value", "bindchange", "start", "end", "fields"],
     "radio-group": ["bindchange"],
