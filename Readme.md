@@ -99,7 +99,7 @@ nmap <leader>r <Plug>WxappReload
 
 * [xml.vim](http://www.vim.org/scripts/script.php?script_id=1397) 用于辅助编辑 xml 文件, 包含自动添加匹配标签、快速修改/删除标签等功能。
 * [emmet-vim](https://github.com/mattn/emmet-vim) 快速生成 xml 和 css,
-  我的配置：
+  参考配置：
 
     ``` vim
       let g:user_emmet_settings = {
@@ -141,6 +141,8 @@ nmap <leader>r <Plug>WxappReload
       \ },
       \}
     ```
+  
+  如果你已经配置了变量 `g:user_emmet_settings`,  注意避免重复设置。
 
 ## 语法检查
 
