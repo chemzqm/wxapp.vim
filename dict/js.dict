@@ -70,6 +70,7 @@ onCompassChange
 onHide
 onLaunch
 onLoad
+onPullDownRefreash
 onReady
 onShow
 onSocketClose
