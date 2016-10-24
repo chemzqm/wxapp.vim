@@ -70,7 +70,7 @@ Wxapp.vim 专为微信小程序开发的插件，它提供以下主要功能：
 ==============================================================================
 INSTALLATION				*wxapp-installation*
 
-以下分别是使用 |NeoBundle| |Plugin| |Plug| 安装的命令：
+以下分别是使用 |NeoBundle| |Vundle| |Plug| 安装的命令：
 
 >
 	NeoBundle 'chemzqm/wxapp.vim'

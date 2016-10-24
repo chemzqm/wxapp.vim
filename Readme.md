@@ -6,6 +6,7 @@
 
 ## 目录
 
+- [安装方式](安装方式)
 - [效果图](#效果图)
 - [功能列表](功能列表)
 - [智能补全](#智能补全)
@@ -14,6 +15,17 @@
 - [推荐插件](#推荐插件)
 - [语法检查](#语法检查)
 - [待完成](#待完成)
+
+## 安装方式
+
+
+以下分别是使用 [NeoBundle](https://github.com/Shougo/neobundle.vim) [Vundle](https://github.com/VundleVim/Vundle.vim) [vim-plug](https://github.com/junegunn/vim-plug) 安装的命令：
+
+
+    NeoBundle 'chemzqm/wxapp.vim'
+    Plugin 'chemzqm/wxapp.vim'
+    Plug 'chemzqm/wxapp.vim'
+
 
 ## 效果图
 
