@@ -2,7 +2,12 @@ snippet import "wxapp import" b
 <import src="${1:./header.wxml}" />
 endsnippet
 
-snippet template "wxapp template" b
+snippet template "wxapp define template" b
+<template name="${1:name}">
+</template>
+endsnippet
+
+snippet temp "wxapp use template" b
 <template is="${1:name}" data="{{${2:...data}}}"/>
 endsnippet
 
