@@ -2,12 +2,16 @@ snippet import "wxapp import" b
 <import src="${1:./header.wxml}" />
 endsnippet
 
+snippet include "wxapp import" b
+<include src="${1:./header.wxml}" />
+endsnippet
+
 snippet template "wxapp define template" b
 <template name="${1:name}">
 </template>
 endsnippet
 
-snippet temp "wxapp use template" b
+snippet template-is "wxapp use template" b
 <template is="${1:name}" data="{{${2:...data}}}"/>
 endsnippet
 
@@ -161,4 +165,17 @@ endsnippet
 
 snippet canvas "wxapp canvas" b
 <canvas style="${1}" canvas-id="${2:canvas}"></canvas>
+endsnippet
+
+snippet contact "wxapp contact button" b
+<contact-button 
+	type="${1:default-light}"
+	size="${2:20}"
+	session-from="${3:wxapp}"
+>
+</contact-button>
+endsnippet
+
+snippet textarea "wxapp textarea" b
+<textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
 endsnippet

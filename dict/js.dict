@@ -173,3 +173,5 @@ checkSession
 getCurrentPages
 onReachBottom
 changedTouches
+switchTab
+

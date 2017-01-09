@@ -27,8 +27,10 @@
     "action-sheet-cancel": [],
     "navigator": ["url", "redirect", "hover-class"],
     "audio": ["action", "src", "loop", "controls", "poster", "name", "author", "binderror", "bindplay", "bindpause", "bindratechange", "bindtimeupdate", "bindended"],
-    "map": ["longitude", "latitude", "scale", "markers", "covers"],
-    "canvas": ["canvas-id", "binderror"]
+    "map": ["longitude", "latitude", "scale", "markers", "covers", "polyline", "circles", "controls", "include-points", "show-location", "bindmarkertap", "bindcontroltap", "bindregionchange"],
+    "canvas": ["canvas-id", "binderror", "disable-scroll"],
+    "image": ["src", "mode"],
+    "contact-button": []
   },
   "attrs": {
     "data": "{{}}",
@@ -65,13 +67,18 @@
     "color": []
   },
   "icon": {
-    "type": ["success", "success_no_circle", "info", "warn", "waiting", "cancel", "download", "search", "clear"],
+    "type": ["success", "info", "warn", "waiting", "safe_success", "safe_warn",
+      "success_circle", "success_no_circle", "waiting_circle", "circle", "download",
+      "info_circle", "cancel", "search", "clear"],
     "size": [23]
   },
   "button": {
     "size": ["default", "mini"],
     "type": ["primary", "default", "warn"],
     "form-type": ["submit", "reset"]
+  },
+  "image": {
+    "mode": ["scaleToFill", "aspectFit", "aspectFill", "widthFix", "top", "bottom", "center", "left", "right"]
   },
   "switch": {
     "type": ["switch", "checkbox"]
