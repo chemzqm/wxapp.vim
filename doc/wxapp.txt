@@ -169,14 +169,6 @@ COMMANDS 				*wxapp-commands*
 ------------------------------------------------------------------------------
 MAPPING 				*wxapp-mappings*
 
-<plug>WxappReload
-
-      通过判定当前文件类型 (wxml 和 wxss 时刷新，其它时候重建项目) 来让微信
-      开发者工具执行刷新或者重建操作，免去手工切换的烦恼。添加自定义快捷键：
-
-  nmap <leader>r <Plug>WxappReload
-
-
 ------------------------------------------------------------------------------
 FUNCTIONS 				*wxapp-functions*
 

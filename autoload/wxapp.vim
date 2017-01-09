@@ -29,36 +29,6 @@ function! wxapp#start() abort
     \'end tell')
 endfunction
 
-function! wxapp#reload() abort
-  if !has("mac") | return | endif
-  return s:osascript(
-    \ 'if application "wechatwebdevtools" is not running',
-    \   'error',
-    \ 'end if') && s:osascript(
-    \ 'tell application "wechatwebdevtools"',
-    \   'activate',
-    \   'delay 0.2',
-    \   'tell application "System Events"',
-    \     'key code {55, 15}',
-    \   'end tell',
-    \ 'end tell')
-endfunction
-
-function! wxapp#rebuild() abort
-  if !has("mac") | return | endif
-  return s:osascript(
-    \ 'if application "wechatwebdevtools" is not running',
-    \   'error',
-    \ 'end if') && s:osascript(
-    \ 'tell application "wechatwebdevtools"',
-    \   'activate',
-    \   'delay 0.2',
-    \   'tell application "System Events"',
-    \     'key code {55, 11}',
-    \   'end tell',
-    \ 'end tell')
-endfunction
-
 function! s:osascript(...) abort
   let args = join(map(copy(a:000), '" -e ".shellescape(v:val)'), '')
   call  s:system('osascript'. args)
