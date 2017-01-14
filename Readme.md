@@ -28,26 +28,25 @@
 
 ## 效果图
 
-![one](https://cloud.githubusercontent.com/assets/251450/18817567/1bf3c1a0-8396-11e6-81b0-46de8b86acca.gif)
-
 文件生成
+
+* 插入代码块
 
 ![two](https://cloud.githubusercontent.com/assets/251450/18817568/222c1180-8396-11e6-9bed-a175d81f201f.gif)
 
-插入代码块
+* 使用 [unite](https://github.com/Shougo/unite.vim) 查找并插入代码
 
 ![three](https://cloud.githubusercontent.com/assets/251450/18817569/27e7db54-8396-11e6-85e2-3f82fc07365e.gif)
 
-使用 [unite](https://github.com/Shougo/unite.vim) 查找并插入代码
 
 ## 功能列表
 
 * [页面目录生成](#目录生成)
-* [智能刷新开发者工具映射](#刷新开发者工具) (仅支持 macos)
 * wxml 和 wxss 文件检测, 代码高亮, 缩进函数 (推荐快捷键 `=at` `=a{`)
 * wxml, wxss 以及 javascript dictionary 文件, 使用参考：[vim dictionary 的使用方式](https://chemzqm.me/vim-dictionary)
 * wxml 和 javascript [Ultisnips](https://github.com/SirVer/ultisnips) 代码块补全
 * wxml 和 wxss 的[语法检查支持](#语法检查)
+* wxml wxss 以及 JavaScript omnicomplete 补全
 
 ## 智能补全
 
@@ -61,19 +60,24 @@
   属性、属性值的智能补全（官方 IDE 仅支持标签）
 
 * 针对 javscript 本插件提供了 [tern](https://github.com/ternjs/tern)
-  的插件，内含所有 API 的函数补全，使用前需要首先安装 
+  的插件，内含所有 wx 相关 API 的函数补全，使用前需要首先安装 
   [tern-for-vim](https://github.com/ternjs/tern_for_vim)
-  插件，使用 `npm install` 命令安装 tern 之后将文件 `tern/wxapp.js` 拷贝到
-  `tern_for_vim/node_modules/tern/plugin` 目录下，最后在小程序项目根目录下配置文件
-  `.tern-project` 为：
+  插件，使用 `npm install` 命令安装 tern。
+  将文件 `tern/wxapp.json` 拷贝到所有 小程序项目的父目录下，
+  最后在小程序项目的根目录下配置文件 `.tern-project` 为：
 
   ``` json
   {
     "libs": [
-      "ecmascript"
+      "browser",
+      "../wxapp"
+    ],
+    "loadEagerly": [
     ],
     "plugins": {
-      "wxapp": {}
+      "doc_comment": {},
+      "es_modules": {},
+      "commonjs": {}
     }
   }
   ```
