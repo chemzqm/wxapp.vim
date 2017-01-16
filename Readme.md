@@ -62,7 +62,16 @@
 * 针对 javscript 本插件提供了 [tern](https://github.com/ternjs/tern)
   的插件，内含所有 wx 相关 API 的函数补全，使用前需要首先安装 
   [tern-for-vim](https://github.com/ternjs/tern_for_vim)
-  插件，使用 `npm install` 命令安装 tern。
+  插件。
+
+  在 tern-for-vim 插件下执行：
+  
+        npm install https://github.com/ternjs/tern/tarball/master -S
+
+  命令安装 tern。
+
+  **npm 上的 tern 还不支持参数内属性补全，请安装使用 master 分支**
+
   将文件 `tern/wxapp.json` 拷贝到所有 小程序项目的父目录下，
   最后在小程序项目的根目录下配置文件 `.tern-project` 为：
 
@@ -81,8 +90,15 @@
     }
   }
   ```
+  
+  * `doc_comment` 插件用于反射 jsdoc 的文档
+  * `es_modules` 用于 es6 模块的路径解析
+  * `commonjs` 用于 require exports 相关解析。
 
   即可为项目的 javscript 文件启用 `omnicomplete` 了
+
+  安装完成后，可通过 vim 打开一个 js 文件，然后查看命令 `:echo &omnifunc`
+  返回来确保 tern 的 omni 补全已启用。
 
 
 ## 目录生成
