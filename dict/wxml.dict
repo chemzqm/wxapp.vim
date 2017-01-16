@@ -145,3 +145,4 @@ wx:if
 wx:elif
 wx:else
 textarea
+selectable

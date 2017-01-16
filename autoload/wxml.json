@@ -9,7 +9,7 @@
     "swiper": ["indicator-dots", "autoplay", "current", "interval", "duration", "bindchange"],
     "swiper-item": [],
     "icon": ["type", "size", "color"],
-    "text": [],
+    "text": ["selectable"],
     "progress": ["percent", "show-info", "stroke-width", "color", "active"],
     "button": ["size", "type", "plain", "disabled", "loading", "form-type", "hover-class"],
     "checkbox-group": ["bindchange"],
