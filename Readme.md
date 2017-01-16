@@ -30,6 +30,10 @@
 
 文件生成
 
+* js 智能补全
+
+![wxapp](https://cloud.githubusercontent.com/assets/251450/21974010/31568a52-dbff-11e6-994d-9ce011baa058.gif)
+
 * 插入代码块
 
 ![two](https://cloud.githubusercontent.com/assets/251450/18817568/222c1180-8396-11e6-9bed-a175d81f201f.gif)
