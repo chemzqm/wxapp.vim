@@ -173,7 +173,9 @@
     "globals": {
       "App": true,
       "Page": true,
-      "wx": true
+      "getApp": true,
+      "wx": true,
+      "getCurrentPages": true
     },
     ```
   避免小程序变量的未定义错误。
@@ -182,10 +184,6 @@
 针对 wxss 的[参考配置](https://gist.github.com/chemzqm/7fc6144d9953f9cfa71bd18fdfcee5b6), 安装本插件后可添加配置： `let g:neomake_wxss_enabled_makers = ['stylelint']` 启用 neomake 的 wxss 的代码检测。
 
 * wxml 推荐使用 [tidy-html5](https://github.com/htacg/tidy-html5), 可使用命令 `brew install tidy-html5` 进行安装, 安装本插件后添加配置 `let g:neomake_wxml_enabled_makers = ['tidy']` 启用 neomake 的 wxml 代码检测。
-
-## 待完成
-
-* 文档跳转支持
 
 ## LICENSE
 
