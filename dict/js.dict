@@ -91,7 +91,7 @@ onCompassChange
 onHide
 onLaunch
 onLoad
-onPullDownRefreash
+onPullDownRefresh
 onReachBottom
 onReady
 onShow
