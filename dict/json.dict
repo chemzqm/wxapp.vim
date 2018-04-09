@@ -1,0 +1,9 @@
+navigationBarBackgroundColor
+navigationBarTextStyle
+navigationBarTitleText
+backgroundColor
+backgroundTextStyle
+enablePullDownRefresh
+disableScroll
+onReachBottomDistance
+usingComponents

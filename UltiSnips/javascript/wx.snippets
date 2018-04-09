@@ -13,12 +13,12 @@ snippet Page "create Page instance" b
 Page({
 	data:{
 	},
-	onLoad: function(options){
+	onLoad(options){
 	}
 })
 endsnippet
 
-snippet wx.request "send https request" b
+snippet request "send https request" b
 wx.request({
 	url: "${1:/}",
 	method: "${2:POST}",
@@ -31,7 +31,7 @@ wx.request({
 })
 endsnippet
 
-snippet wx.uploadFile "upload file" b
+snippet uploadFile "upload file" b
 wx.uploadFile({
 	url: "${1:/}",
 	filePath: ${2:tempFilePath},
@@ -43,7 +43,7 @@ wx.uploadFile({
 })
 endsnippet
 
-snippet wx.downloadFile "download file" b
+snippet downloadFile "download file" b
 wx.downloadFile({
 	url: "${1:/}",
 	type: "${2:image/audio/video}",
@@ -53,35 +53,35 @@ wx.downloadFile({
 })
 endsnippet
 
-snippet wx.connectSocket "connect socket" b
+snippet connectSocket "connect socket" b
 wx.connectSocket({
 	url: "${1:/}",
 })
 endsnippet
 
-snippet wx.sendSocketMessage "send socket message" b
+snippet sendSocketMessage "send socket message" b
 wx.sendSocketMessage({
 	data: "${1:string}"
 })
 endsnippet
 
-snippet wx.onSocketMessage "on socket message" b
+snippet onSocketMessage "on socket message" b
 wx.onSocketMessage(function(res) {
 	var ${1:s} = res.data
 })
 endsnippet
 
-snippet wx.onSocketError "on socket error" b
+snippet onSocketError "on socket error" b
 wx.onSocketError(function(res){
 	${1}
 })
 endsnippet
 
-snippet wx.closeSocket "close socket" b
+snippet closeSocket "close socket" b
 wx.closeSocket()
 endsnippet
 
-snippet wx.chooseImage "choose image" b
+snippet chooseImage "choose image" b
 wx.chooseImage({
 	count: ${1: 1}, // 默认9
 	sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -93,14 +93,14 @@ wx.chooseImage({
 })
 endsnippet
 
-snippet wx.previewImage "preview image" b
+snippet previewImage "preview image" b
 wx.previewImage({
 	current: '', // 当前显示图片的http链接
 	urls: [] // 需要预览的图片http链接列表
 })
 endsnippet
 
-snippet wx.getImageInfo "get iamge info" b
+snippet getImageInfo "get image info" b
 wx.getImageInfo({
 	src: ${1:tempFilePath},
 	success: function (res) {
@@ -110,7 +110,7 @@ wx.getImageInfo({
 })
 endsnippet
 
-snippet wx.startRecord "start record" b
+snippet startRecord "start record" b
 wx.startRecord({
 	success: function(res) {
 		var tempFilePath = res.tempFilePath
@@ -118,7 +118,7 @@ wx.startRecord({
 })
 endsnippet
 
-snippet wx.playVoice "play voice" b
+snippet playVoice "play voice" b
 wx.playVoice({
 	filePath: '${1:tempFilePath}',
 	complete: function() {
@@ -126,7 +126,7 @@ wx.playVoice({
 })
 endsnippet
 
-snippet wx.getBackgroundAudioPlayerState "background audio player state" b
+snippet getBackgroundAudioPlayerState "background audio player state" b
 wx.getBackgroundAudioPlayerState({
 		success: function(res) {
 				var status = res.status
@@ -138,7 +138,7 @@ wx.getBackgroundAudioPlayerState({
 })
 endsnippet
 
-snippet wx.playBackgroundAudio "play background audio" b
+snippet playBackgroundAudio "play background audio" b
 wx.playBackgroundAudio({
 	dataUrl: ${1},
 	title: ${2},
@@ -146,17 +146,17 @@ wx.playBackgroundAudio({
 })
 endsnippet
 
-snippet wx.seekBackgroundAudio "seek background audio" w
+snippet seekBackgroundAudio "seek background audio" w
 wx.seekBackgroundAudio({
 	position: ${1:percent}
 })
 endsnippet
 
-snippet wx.createAudioContext "audio context" b
+snippet createAudioContext "audio context" b
 wx.createAudioContext(${1:audioId})
 endsnippet
 
-snippet wx.saveFile "save file" w
+snippet saveFile "save file" w
 wx.saveFile({
 	tempFilePath: ${1:tempFilePath},
 	success: function(res) {
@@ -165,7 +165,7 @@ wx.saveFile({
 })
 endsnippet
 
-snippet wx.getSavedFileList "saved file list" b
+snippet getSavedFileList "saved file list" b
 wx.getSavedFileList({
 	success: function(res) {
 		let ${1:fileList} = res.fileList
@@ -173,7 +173,7 @@ wx.getSavedFileList({
 })
 endsnippet
 
-snippet wx.getSavedFileInfo "get saved file info" b
+snippet getSavedFileInfo "get saved file info" b
 wx.getSavedFileInfo({
 	filePath: ${1:savedPath},
 	success: function(res) {
@@ -183,7 +183,7 @@ wx.getSavedFileInfo({
 })
 endsnippet
 
-snippet wx.removeSavedFile "remove saved file" b
+snippet removeSavedFile "remove saved file" b
 wx.removeSavedFile({
 	filePath: ${1:savedPath},
 	success: function(res) {
@@ -191,7 +191,7 @@ wx.removeSavedFile({
 })
 endsnippet
 
-snippet wx.openDocument "open document" b
+snippet openDocument "open document" b
 wx.openDocument({
 	filePath: ${1:filePath},
 	success: function(res) {
@@ -199,7 +199,7 @@ wx.openDocument({
 })
 endsnippet
 
-snippet wx.chooseVideo "choose video" b
+snippet chooseVideo "choose video" b
 wx.chooseVideo({
 	sourceType: ['album','camera'],
 	maxDuration: ${1:60},
@@ -212,22 +212,22 @@ wx.chooseVideo({
 })
 endsnippet
 
-snippet wx.createVideoContext "create video context" b
+snippet createVideoContext "create video context" b
 wx.createVideoContext(${1:videoId})
 endsnippet
 
-snippet wx.setStorage "set storage" b
+snippet setStorage "set storage" b
 wx.setStorage({
 	key: ${1:key}
 	data: ${2:value}
 })
 endsnippet
 
-snippet wx.setStorageSync "set storage sync" w
+snippet setStorageSync "set storage sync" w
 wx.setStorageSync('${1:key}',${2:value})
 endsnippet
 
-snippet wx.getStorage "get storage" w
+snippet getStorage "get storage" w
 wx.getStorage({
 	key: '${1:key}',
 	success: function(res) {
@@ -236,11 +236,11 @@ wx.getStorage({
 })
 endsnippet
 
-snippet wx.getStorageSync "get storage sync" b
+snippet getStorageSync "get storage sync" b
 var value = wx.getStorageSync('${1:key}')
 endsnippet
 
-snippet wx.removeStorage "remove storage" b
+snippet removeStorage "remove storage" b
 wx.removeStorage({
 	key: ${1:key},
 	success: function(res) {
@@ -249,7 +249,11 @@ wx.removeStorage({
 })
 endsnippet
 
-snippet wx.getLocation "get location" b
+snippet clearStorage "clear storage" b
+wx.clearStorage()
+endsnippet
+
+snippet getLocation "get location" b
 wx.getLocation({
 	type: 'wgs84', // or 'gcj02' for open location
 	success: function(res) {
@@ -258,7 +262,7 @@ wx.getLocation({
 })
 endsnippet
 
-snippet wx.chooseLocation "choose location" b
+snippet chooseLocation "choose location" b
 wx.chooseLocation({
 	success: function(res) {
 		let name = res.name
@@ -269,7 +273,7 @@ wx.chooseLocation({
 })
 endsnippet
 
-snippet wx.openLocation "open location" b
+snippet openLocation "open location" b
 wx.openLocation({
 	latitude: latitude,
 	longitude: logitude,
@@ -277,11 +281,11 @@ wx.openLocation({
 })
 endsnippet
 
-snippet wx.createMapContext "create map context" w
+snippet createMapContext "create map context" w
 let ${1:content} = wx.createMapContext(${1:mapId})
 endsnippet
 
-snippet wx.getNetworkType "network type" b
+snippet getNetworkType "network type" b
 wx.getNetworkType({
 	success: function(res) {
 		var networkType = res.networkType // 返回网络类型2g，3g，4g，wifi
@@ -289,7 +293,7 @@ wx.getNetworkType({
 })
 endsnippet
 
-snippet wx.getSystemInfo "system info" b
+snippet getSystemInfo "system info" b
 wx.getSystemInfo({
 	success: function(res) {
 		//model pixelRatio windowWidth windowHeight language version platform
@@ -297,7 +301,7 @@ wx.getSystemInfo({
 })
 endsnippet
 
-snippet wx.getSystemInfoSync "system info sync" b
+snippet getSystemInfoSync "system info sync" b
 try {
 	let res = wx.getSystemInfoSync()
 	console.log(res.model)
@@ -312,7 +316,7 @@ try {
 }
 endsnippet
 
-snippet wx.onAccelerometerChange "accelerometer change" b
+snippet onAccelerometerChange "accelerometer change" b
 wx.onAccelerometerChange(function(res) {
 	console.log(res.x)
 	console.log(res.y)
@@ -320,13 +324,13 @@ wx.onAccelerometerChange(function(res) {
 })
 endsnippet
 
-snippet wx.makePhoneCall "make phone call" b
+snippet makePhoneCall "make phone call" b
 wx.makePhoneCall({
 	phoneNumber: ${1:phoneNumber}
 })
 endsnippet
 
-snippet wx.scanCode "scan code" b
+snippet scanCode "scan code" b
 wx.scanCode({
 	success: (res) => {
 		console.log(res.path)
@@ -334,31 +338,31 @@ wx.scanCode({
 })
 endsnippet
 
-snippet wx.onCompassChange "compass change" b
+snippet onCompassChange "compass change" b
 wx.onCompassChange(function (res) {
 	console.log(res.direction)
 })
 endsnippet
 
-snippet wx.setNavigationBarTitle "navigation bar title" b
+snippet setNavigationBarTitle "navigation bar title" b
 wx.setNavigationBarTitle({
 	title: '${1:title}'
 })
 endsnippet
 
-snippet wx.navigateTo "navigateTo" b
+snippet navigateTo "navigateTo" b
 wx.navigateTo({
 	url: '${1:url}'
 })
 endsnippet
 
-snippet wx.redirectTo "redirectTo" b
+snippet redirectTo "redirectTo" b
 wx.redirectTo({
 	url: '${1:url}'
 })
 endsnippet
 
-snippet wx.createAnimation "createAnimation" b
+snippet createAnimation "createAnimation" b
 var animation = wx.createAnimation({
 	duration: 1000,
 	timingFunction: "ease",
@@ -366,7 +370,7 @@ var animation = wx.createAnimation({
 })
 endsnippet
 
-snippet wx.showToast "show toast" b
+snippet showToast "show toast" b
 wx.showToast({
 	title: '${1:title}',
 	icon: '${2:success}',
@@ -374,7 +378,18 @@ wx.showToast({
 })
 endsnippet
 
-snippet wx.showModal "show modal" b
+snippet showLoading "show loading" b
+wx.showLoading({
+	title: '${1:title}',
+	mask: ${2:false}
+})
+endsnippet
+
+snippet hideLoading "hide loading" b
+wx.hideLoading()
+endsnippet
+
+snippet showModal "show modal" b
 wx.showModal({
 	title: '${1}',
 	content: '${2}',
@@ -386,7 +401,7 @@ wx.showModal({
 })
 endsnippet
 
-snippet wx.showActionSheet "show action sheet" b
+snippet showActionSheet "show action sheet" b
 wx.showActionSheet({
 	itemList: [${1}],
 	success: function(res) {
@@ -398,7 +413,7 @@ wx.showActionSheet({
 })
 endsnippet
 
-snippet wx.login "login" b
+snippet login "login" b
 wx.login({
 	success: function(res) {
 		if (res.code) {
@@ -416,7 +431,7 @@ wx.login({
 })
 endsnippet
 
-snippet wx.getUserInfo "getUserInfo" b
+snippet getUserInfo "getUserInfo" b
 wx.getUserInfo({
 	success: function(res) {
 		var userInfo = res.userInfo
@@ -430,7 +445,7 @@ wx.getUserInfo({
 })
 endsnippet
 
-snippet wx.requestPayment "requestPayment" b
+snippet requestPayment "requestPayment" b
 wx.requestPayment({
 	'timeStamp': Math.floor(Date.now()/1000),
 	'nonceStr': uid(10),

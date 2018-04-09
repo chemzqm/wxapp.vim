@@ -183,3 +183,6 @@ video
 width
 windowHeight
 windowWidth
+getBackgroundAudioManager
+getFileInfo
+digestAlgorithm
