@@ -7,3 +7,5 @@ function! s:generate(...) abort
     call wxapp#generate('.', a:1)
   endif
 endfunction
+
+nnoremap <silent> <Plug>(WxOpenRelated) :<C-u>call wxapp#open_related()<CR>
