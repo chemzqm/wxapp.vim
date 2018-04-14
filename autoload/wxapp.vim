@@ -72,6 +72,9 @@ function! wxapp#open_related() abort
   exe 'nnoremap <buffer> <silent> t :call <SID>tabEdit("'.root.'")<cr>'
   exe 'nnoremap <buffer> <silent> s :call <SID>splitEdit("'.root.'", 0)<cr>'
   exe 'nnoremap <buffer> <silent> v :call <SID>splitEdit("'.root.'", 1)<cr>'
+  syntax clear
+  syn match wxAction /^\w/
+  hi def link wxAction Label
 endfunction
 
 function! s:editFile(file)
