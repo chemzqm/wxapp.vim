@@ -100,3 +100,12 @@ function! s:splitEdit(root, vertical)
   let cmd = a:vertical ? 'vsplit' : 'split'
   exe cmd.' '.a:root.'/'.line[2:]
 endfunction
+
+function! wxapp#open_dash()
+  let url = 'dash://wxapp:'.expand('<cword>')
+  if exists(':Open')
+    execute 'Open '.url
+  else
+    call system('open '.url)
+  endif
+endfunction

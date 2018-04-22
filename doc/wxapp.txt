@@ -169,6 +169,13 @@ COMMANDS 				*wxapp-commands*
 ------------------------------------------------------------------------------
 MAPPING 				*wxapp-mappings*
 
+<Plug>(WxOpenRelated)	打开下面临时窗口选择想关联的 wxml, wxss, js, json
+			文件， 可以在 normal 状态使用回车或者输入 a b c d
+			快速打开关联文件。
+
+<Plug>(WxOpenDash)	使用光标下单词搜索 Dash 中的 wxapp 文档，需要 Dash
+			中安装并启用 https://github.com/chemzqm/wx-dash
+
 ------------------------------------------------------------------------------
 FUNCTIONS 				*wxapp-functions*
 
@@ -191,11 +198,15 @@ wxapp#generate(folder, name)		*wxapp#generate*
 ==============================================================================
 CHANGELOG				 *wxapp-changelog*
 
-0.1.0	Sep 27, 2016
-	- 添加文档
+1.0.0	2018-04-22
+	- 添加 <Plug>(WxOpenRelated)
+	- 添加 <Plug>(WxOpenDash)
 
-0.1.1	Sep 28, 2016
+0.1.1	2016-09-28
 	- 添加 omnicomplete 支持
+
+0.1.0	2016-09-27
+	- 添加文档
 
 ==============================================================================
 

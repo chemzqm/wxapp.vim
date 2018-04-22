@@ -9,3 +9,4 @@ function! s:generate(...) abort
 endfunction
 
 nnoremap <silent> <Plug>(WxOpenRelated) :<C-u>call wxapp#open_related()<CR>
+nnoremap <silent> <Plug>(WxOpenDash) :<C-u>call wxapp#open_dash()<CR>
