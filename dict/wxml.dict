@@ -138,9 +138,9 @@ video
 view
 waiting
 warn
+item
 wx:for-items
 wx:for-item
-item
 wx:if
 wx:elif
 wx:else

@@ -59,7 +59,7 @@ function! wxapp#open_related() abort
   execute 'keepalt below 4new [switch file]'
   call setline(1, lines[0])
   call append(1, lines[1:])
-  setl filetype=runresult buftype=nofile bufhidden=wipe nobuflisted readonly
+  setl buftype=nofile bufhidden=wipe nobuflisted readonly
   if !has('gui_running')
     redraw
   endif

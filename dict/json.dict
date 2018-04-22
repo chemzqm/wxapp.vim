@@ -7,3 +7,6 @@ enablePullDownRefresh
 disableScroll
 onReachBottomDistance
 usingComponents
+navigationStyle
+backgroundColorTop
+backgroundColorBottom
