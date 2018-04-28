@@ -27,5 +27,5 @@ call ale#linter#Define('wxss', {
 \   'name': 'stylelint',
 \   'executable_callback': 'ale_linters#wxss#stylelint#GetExecutable',
 \   'command_callback': 'ale_linters#wxss#stylelint#GetCommand',
-\   'callback': 'ale#handlers#HandleStyleLintFormat',
+\   'callback': 'ale#handlers#css#HandleStyleLintFormat',
 \})
