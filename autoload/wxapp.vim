@@ -56,7 +56,7 @@ function! wxapp#open_related() abort
         \'b '.name.'.wxss',
         \'c '.name.'.js',
         \'d '.name.'.json']
-  execute 'keepalt below 4new [switch file]'
+  execute 'keepalt below 4new [Sketch File]'
   call setline(1, lines[0])
   call append(1, lines[1:])
   setl buftype=nofile bufhidden=wipe nobuflisted readonly
