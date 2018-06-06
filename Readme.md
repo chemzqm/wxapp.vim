@@ -18,13 +18,11 @@
 ## 安装方式
 
 
-以下分别是使用 [NeoBundle](https://github.com/Shougo/neobundle.vim) [Vundle](https://github.com/VundleVim/Vundle.vim) [vim-plug](https://github.com/junegunn/vim-plug) 安装的命令：
+以下分别是使用 [NeoBundle](https://github.com/Shougo/neobundle.vim) [vim-plug](https://github.com/junegunn/vim-plug) 安装的命令：
 
 
     NeoBundle 'chemzqm/wxapp.vim'
-    Plugin 'chemzqm/wxapp.vim'
     Plug 'chemzqm/wxapp.vim'
-
 
 ## 效果图
 
@@ -68,13 +66,10 @@
   [tern-for-vim](https://github.com/ternjs/tern_for_vim)
   插件。
 
-  在 tern-for-vim 插件下执行：
-  
-        npm install https://github.com/ternjs/tern/tarball/master -S
+  **提示1:** 部分插件例如 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#why-isnt-ycm-just-written-in-plain-vimscript-ffs)  可以提供 tern 支持，无需使用该 tern_for_vim，请参照其文档就行设置
 
-  命令安装 tern。
-
-  **npm 上的 tern 还不支持参数内属性补全，请安装使用 master 分支**
+  **提示2** [vundle](https://github.com/VundleVim/Vundle.vim) 对于 tern_for_vim
+  支持有 bug，请考虑更换其它插件管理工具。
 
   将文件 `tern/wxapp.json` 拷贝到所有 小程序项目的父目录下，
   最后在小程序项目的根目录下配置文件 `.tern-project` 为：
