@@ -2,44 +2,31 @@
 
 微信小程序开发 vim 插件。
 
-提供包含文件检测、智能补全、文档跳转、语法高亮、缩进、代码段、单词列表、语法检查等功能。
+提供包含文件检测、语法高亮、缩进、代码片段功能。
+
+推荐使用 [coc.nvim](https://github.com/neoclide/coc.nvim) 获得小程序 LSP 支持，例如：
+
+* 智能补全
+* 语法检查
+* 文档查看
+
+详细文档： [Coc 小程序开发支持](https://github.com/neoclide/coc.nvim/wiki/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%94%AF%E6%8C%81)
 
 ## 目录
 
 - [安装方式](安装方式)
 - [效果图](#效果图)
 - [功能列表](功能列表)
-- [智能补全](#智能补全)
-- [目录生成](#目录生成)
 - [推荐插件](#推荐插件)
-- [语法检查](#语法检查)
 - [待完成](#待完成)
 
 ## 安装方式
-
 
 以下分别是使用 [NeoBundle](https://github.com/Shougo/neobundle.vim) [vim-plug](https://github.com/junegunn/vim-plug) 安装的命令：
 
 
     NeoBundle 'chemzqm/wxapp.vim'
     Plug 'chemzqm/wxapp.vim'
-
-## 效果图
-
-文件生成
-
-* js 智能补全
-
-![wxapp](https://cloud.githubusercontent.com/assets/251450/21974010/31568a52-dbff-11e6-994d-9ce011baa058.gif)
-
-* 插入代码块
-
-![two](https://cloud.githubusercontent.com/assets/251450/18817568/222c1180-8396-11e6-9bed-a175d81f201f.gif)
-
-* 使用 [unite](https://github.com/Shougo/unite.vim) 查找并插入代码
-
-![three](https://cloud.githubusercontent.com/assets/251450/18817569/27e7db54-8396-11e6-85e2-3f82fc07365e.gif)
-
 
 ## 功能列表
 
@@ -48,68 +35,6 @@
 * wxml, wxss 以及 javascript dictionary 文件, 使用参考：[vim dictionary 的使用方式](https://chemzqm.me/vim-dictionary)
 * wxml 和 javascript [Ultisnips](https://github.com/SirVer/ultisnips) 代码块补全
 * wxml 和 wxss 的[语法检查支持](#语法检查)
-* wxml wxss 以及 JavaScript omnicomplete 补全
-
-## 智能补全
-
-本插件提供比官方 IDE 更为完整实用的智能补全,  具体实现和使用方式如下：
-
-* 针对 wxcss 使用的 vim runtime 自带的 css 补全，插件内已进行如下配置：
-
-    setl omnifunc=csscomplete#CompleteCSS
-
-* 针对 wxml 实现并且配置了函数 `wxmlcomplete#Complete`, 它能提供标签、
-  属性、属性值的智能补全（官方 IDE 仅支持标签）
-
-* 针对 javscript 本插件提供了 [tern](https://github.com/ternjs/tern)
-  的插件，内含所有 wx 相关 API 的函数补全，使用前需要首先安装 
-  [tern-for-vim](https://github.com/ternjs/tern_for_vim)
-  插件。
-
-  **提示1:** 部分插件例如 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe#why-isnt-ycm-just-written-in-plain-vimscript-ffs)  可以提供 tern 支持，无需使用该 tern_for_vim，请参照其文档就行设置
-
-  **提示2** [vundle](https://github.com/VundleVim/Vundle.vim) 对于 tern_for_vim
-  支持有 bug，请考虑更换其它插件管理工具。
-
-  将文件 `tern/wxapp.json` 拷贝到所有 小程序项目的父目录下，
-  最后在小程序项目的根目录下配置文件 `.tern-project` 为：
-
-  ``` json
-  {
-    "libs": [
-      "browser",
-      "../wxapp"
-    ],
-    "loadEagerly": [
-    ],
-    "plugins": {
-      "doc_comment": {},
-      "es_modules": {},
-      "commonjs": {}
-    }
-  }
-  ```
-  
-  * `doc_comment` 插件用于反射 jsdoc 的文档
-  * `es_modules` 用于 es6 模块的路径解析
-  * `commonjs` 用于 require exports 相关解析。
-
-  即可为项目的 javscript 文件启用 `omnicomplete` 了
-
-  安装完成后，可通过 vim 打开一个 js 文件，然后查看命令 `:echo &omnifunc`
-  返回来确保 tern 的 omni 补全已启用。
-
-
-## 目录生成
-
-使用命令 `Wxgen [folder] name` 可以快速生成并打开一个页面所需的 `wxml` `wxss`
-以及 `javascript` 文件，例如：
-
-```
-:Wxgen component product
-```
-
-将在 component 目录下生成 product 目录以及相关的三个文件并打开，如果命令只有一个参数则在当前目录下生成。
 
 ## 推荐插件
 
@@ -157,28 +82,8 @@
       \ },
       \}
     ```
-  
-  如果你已经配置了变量 `g:user_emmet_settings`,  注意避免重复设置。
 
-## 语法检查
-
-* javascript 推荐使用 [eslint](http://eslint.org/), 然后在 `.eslintrc` 中加入
-
-    ``` json
-    "globals": {
-      "App": true,
-      "Page": true,
-      "getApp": true,
-      "wx": true,
-      "getCurrentPages": true
-    },
-    ```
-  避免小程序变量的未定义错误。
-
-* wxss 推荐使用 [stylelint](https://github.com/stylelint/stylelint),
-针对 wxss 的[参考配置](https://gist.github.com/chemzqm/7fc6144d9953f9cfa71bd18fdfcee5b6), 安装本插件后可添加配置： `let g:neomake_wxss_enabled_makers = ['stylelint']` 启用 neomake 的 wxss 的代码检测。
-
-* wxml 推荐使用 [tidy-html5](https://github.com/htacg/tidy-html5), 可使用命令 `brew install tidy-html5` 进行安装, 安装本插件后添加配置 `let g:neomake_wxml_enabled_makers = ['tidy']` 启用 neomake 的 wxml 代码检测。
+    如果你已经配置了变量 `g:user_emmet_settings`,  注意避免重复设置。
 
 ## LICENSE
 
