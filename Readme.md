@@ -12,6 +12,8 @@
 
 详细文档： [Coc 小程序开发支持](https://github.com/neoclide/coc.nvim/wiki/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%94%AF%E6%8C%81)
 
+Mac 用户推荐使用小程序 Dash 文档： [chemzqm/wx-dash](https://github.com/chemzqm/wx-dash)
+
 ## 目录
 
 - [安装方式](安装方式)
